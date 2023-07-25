@@ -1,5 +1,5 @@
 function Home() {
-  return <h1>Let's go!!</h1>;
+  return <h1>"Nós temos que viver sem deixar nenhum arrependimento." PORTGAS D. ACE</h1>;
 }
 
 export default Home;
