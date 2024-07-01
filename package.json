@@ -4,8 +4,10 @@
   "description": "Minha versão do https://www.tabnews.com.br utilizando os conhecimentos adquiridos no https://curso.dev (curso criado pelo Filipe Deschamps)",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "lint:check": "prettier --check .",
+    "dev": "npm run services:up && next dev",
+    "services:up": "docker compose -f infra/compose.yaml up -d",
+    "services:stop": "docker compose -f infra/compose.yaml stop",
+    "services:down": "docker compose -f infra/compose.yaml down",
     "lint:fix": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watchAll"
